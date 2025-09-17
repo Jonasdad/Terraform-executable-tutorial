@@ -1,0 +1,1 @@
+This is an executable tutorial that helps you learn terraform
