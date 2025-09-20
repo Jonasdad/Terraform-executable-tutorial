@@ -1,5 +1,9 @@
 #!/bin/bash
 
+$SPLUNK_HOME/bin/splunk enable listen 9997 -auth admin:password
+
+sudo -u splunk $SPLUNK_HOME/bin/splunk start --accept-license
+
 # Create log directory if it doesn't exist
 mkdir -p /var/log/snort
 
