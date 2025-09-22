@@ -1,7 +1,8 @@
 **Terraform**
 
 Finally, Terraform needs to be installed. Run the following commands:
-1. sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+1. Update apt and install the gnupg software
+  - sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 2. Install the GPG key
   - wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
