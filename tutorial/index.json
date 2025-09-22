@@ -6,6 +6,9 @@
       "text": "intro.md"
     },
     "steps": [
+        {"title": "Docker",
+          "text": "snort/docker.md"
+        },
         {
           "title": "Snort",
           "text": "snort/snort.md"
