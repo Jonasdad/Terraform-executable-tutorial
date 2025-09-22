@@ -6,7 +6,8 @@ Finally, Terraform needs to be installed. Run the following commands:
 2. Install the GPG key
   - <pre>wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
-sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null</pre>>
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+</pre>
 
 3. Verify the GPG key:
   - <pre>gpg --no-default-keyring \
