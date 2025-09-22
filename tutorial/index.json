@@ -1,14 +1,24 @@
 {
-  "title": "Code Actions",
-  "description": "Let users copy or exec code blocks",
+  "title": "IaC Network Monitoring: Snort + Splunk + Terraform",
+  "description": "Installation, configuration and execution of Network Monitoring tools as Infrastructure as Code",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
-      {
-        "text": "step1.md"
-      }
+        {
+          "title": "Snort",
+          "text": "snort/snort.md"
+        },
+        {
+          "title": "Splunk",
+          "text": "splunk/splunk.md"
+        },
+        {
+          "title": "Terraform",
+          "text": "terraform/terraform.md"
+
+        }
     ]
   },
   "backend": {
