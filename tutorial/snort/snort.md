@@ -21,7 +21,7 @@ nano devops.rules
 ```bash
 alert icmp any any -> any any (msg:"ICMP echo request detected!"; itype:8; sid:10000001;)
 ```
-- Close the editor by pressing `ctrl + S`and `ctrl + X` to save and exit.
+- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 - Now we will create the script that runs on container start. This script will start Snort with the appropriate command line arguments to read the custom rules and log alerts to our monitoring directory. It will also start the HTTP server to serve the log files. Create `run-snort.sh` and open it with nano:
 ```bash
 nano run-snort.sh
@@ -48,7 +48,7 @@ snort -c /etc/snort/snort.conf \
 	-q \
 	-K ascii
 ```
-- Close the editor by pressing `ctrl + S`and `ctrl + X` to save and exit.
+- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 
 ## Create Dockerfile
 - Create a file called `Dockerfile` and open it with nano
@@ -74,7 +74,7 @@ EXPOSE 8080
 
 ENTRYPOINT ["/etc/snort/run-snort.sh"]
 ```
-- Close the editor by pressing `ctrl + S`and `ctrl + X` to save and exit.
+- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 
 ## Build the Image
 - Inside the `snort` directory, build the Docker image with the following command. This will download the required base image, dependencies, and create a new image called `snort`:
