@@ -12,7 +12,7 @@
         },
         {
           "title": "Install Docker",
-          "text": "docker/docker.md"
+          "text": "snort/docker.md"
         },
         {
           "title": "Create your own Snort Docker container (Optional)",
