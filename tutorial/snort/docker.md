@@ -34,3 +34,8 @@ Check docker service:
 docker --version
 ```
 If you see `Docker version 28.4.0, build d8eb465` the installation is OK!
+
+Start the Docker service with:
+```bash
+systemctl start docker
+```

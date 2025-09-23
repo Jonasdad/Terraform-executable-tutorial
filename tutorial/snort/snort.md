@@ -79,7 +79,6 @@ ENTRYPOINT ["/etc/snort/run-snort.sh"]
 ## Build the Image
 - Inside the `snort` directory, build the Docker image with the following command. This will download the required base image, dependencies, and create a new image called `snort`:
 ```bash
-systemctl start docker
 docker build -t snort .
 ```
 - After the build completes, you can verify that the image was created successfully by running:
