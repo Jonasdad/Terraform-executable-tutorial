@@ -19,8 +19,11 @@
         },
         {
           "title": "Terraform",
-          "text": "terraform/terraform.md"
-
+          "text": "terraform/terraform.md"          
+        },
+        {
+          "title": "Setting up Snort through Docker",
+          "text": "setup/setup_terraform.md"
         }
     ]
   },
