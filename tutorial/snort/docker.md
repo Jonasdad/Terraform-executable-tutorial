@@ -1,7 +1,7 @@
 # Install Docker
 This tutorial will guide you through each step of installing Docker in an Ubuntu environment. Docker is used to containerize Snort and the HTTP server later in the tutorial. 
 
-**Run the following commands:**
+## Run the following commands
 Set up Docker's apt repository: 
 ```
 sudo apt-get update
