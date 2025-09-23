@@ -1,13 +1,14 @@
 # Installing Terraform on Ubuntu
 
-Finally, Terraform needs to be installed. Run the following commands:
+This tutorial will guide you through the installation of Terraform. It install necessary dependencies, adds GPG keys to verify the authenticity of the packages and finally installs Terraform itself.
+
+## Steps
 Update apt and install the gnupg software
-
-  ```
+```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
-  ```
+```
 
-Install the GPG key
+Download and install the HashiCorp GPG key for package verification
 ```
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
@@ -36,4 +37,4 @@ Verify the installation by running:
 ```
 terraform -help
 ```
-You should see all terraform commands that are available with the current installation.
+You should see all Terraform commands that are available with the current installation.
