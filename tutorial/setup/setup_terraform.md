@@ -11,8 +11,9 @@ mkdir terraform
 cd terraform
 ```
 
-Open `main.tf` in a text editor
+Create and open `main.tf` in a text editor
 ```
+touch main.tf
 nano main.tf
 ```
 ## Working with Terraform
