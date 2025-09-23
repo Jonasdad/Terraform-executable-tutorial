@@ -13,9 +13,9 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 
 3. Verify the GPG key:
 
-  wget -O- https://apt.releases.hashicorp.com/gpg | \
-gpg --dearmor | \
-sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+  gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
 
 
 4. Add the Hashicorp repository to the system:
@@ -31,7 +31,6 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
  sudo apt-get install terraform
 
 7. Verify the installation by running: 
-```
-  ``` terraform -help
+ terraform -help
 
 You should see all terraform commands that are available with the current installation.
