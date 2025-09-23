@@ -74,6 +74,7 @@ The above configuration will run the images with the scripts specified in the `e
 
 Finally, in order for these containers to communicate over a docker network, we must create one. Open a new terminal tab by pressing `+` button at the top of the terminal and run the command:
 ```
+cd terraform
 docker network create container_network
 ```
 
