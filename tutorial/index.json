@@ -20,7 +20,7 @@
         },
         {
           "title": "Terraform",
-          "text": "terraform/terraform.md"          
+          "text": "terraform/installing_terraform.md"          
         },
         {
           "title": "Setting up Terraform to work with Docker",
@@ -28,7 +28,7 @@
         },
         {
           "title": "Deploy and manage your containers through Terraform",
-          "text": "deploy/deploy.md"
+          "text": "terraform/run_terraform.md"
         }
     ]
   },

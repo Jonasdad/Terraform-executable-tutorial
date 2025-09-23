@@ -173,3 +173,7 @@ resource "docker_container" "snort" {
 	depends_on = [ docker_network.container_network ]
 }
 ```
+Please save the main.tf file by press `ctrl + s ` to save the contents, and then `ctrl + x` to exit.
+## What we have done
+
+In this part of the tutorial we explained some key functionalities of Terraform and how to configure the config files to successfully run the intended docker containers.
