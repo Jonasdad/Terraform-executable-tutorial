@@ -7,33 +7,14 @@ This tutorial will guide you through creating an HTTP server that polls the Snor
 ## Prerequisites
  - Docker installed on your machine
 
-## Create Dockerfile and run.sh Script
+## Create run.sh
 - Create a directory called http and navigate into it:
 ```bash
 cd
 mkdir http
 cd http
 ```
-- Create a file called `Dockerfile` and open it with nano
-```bash
-nano Dockerfile
-```
-- We will now create a small containerized environment with the required packages to run the polling service. Add the following lines to the Dockerfile:
-```Dockerfile
-FROM python:3.9-slim
-
-# Install curl for HTTP requests
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
-
-# Copy the run script
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh
-
-# Run the server
-ENTRYPOINT [ "/usr/local/bin/run.sh" ]
-```
-- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
-- The `run.sh` script will contain the logic to poll the Snort container for alerts. The file is copied into the container when building it and runs when the container starts. Create the `run.sh` file in the same directory and open it with nano:
+- We start by creating the `run.sh` script that will contain the logic to poll the Snort container for alerts. The file is copied into the container when building it and runs when the container starts. Create the `run.sh` file in the same directory and open it with nano:
 ```bash
 nano run.sh
 ```
@@ -89,6 +70,27 @@ get_logs() {
 
 # Start the log polling service
 get_logs
+```
+- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
+
+## Create Dockerfile
+- Create a file called `Dockerfile` and open it with nano
+```bash
+nano Dockerfile
+```
+- We will now create a small containerized environment with the required packages to run the polling service. Add the following lines to the Dockerfile:
+```Dockerfile
+FROM python:3.9-slim
+
+# Install curl for HTTP requests
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# Copy the run script
+COPY run.sh /usr/local/bin/run.sh
+RUN chmod +x /usr/local/bin/run.sh
+
+# Run the server
+ENTRYPOINT [ "/usr/local/bin/run.sh" ]
 ```
 - Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 
