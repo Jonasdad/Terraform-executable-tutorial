@@ -33,6 +33,10 @@
         {
           "title": "Deploy and manage your containers through Terraform",
           "text": "terraform/run_terraform.md"
+        },
+        {
+          "title": "Conclusion",
+          "text": "finish.md"
         }
     ]
   },

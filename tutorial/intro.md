@@ -7,6 +7,14 @@ On a high level, the tutorial will include:
 - The Terraform configuration files to deploy and manage the containers
 - Generating traffic to trigger Snort alerts and viewing them through the HTTP server
 
+## Intended Learning Outcomes
+By the end of this tutorial, you should be able to:
+- Understand the basics of Infrastructure as Code (IaC) and its benefits.
+- Install and configure Docker and Terraform on your machine.
+- Create and manage Docker containers using Terraform.
+- Configure a simple network monitoring setup using Snort and an HTTP server.
+- Understand how to trigger and view Snort alerts through the HTTP server.
+
 ## Table of Contents
 1. Background
 2. Install Docker
