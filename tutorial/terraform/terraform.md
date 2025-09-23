@@ -1,4 +1,4 @@
-**Terraform**
+# Installing Terraform on Ubuntu
 
 Finally, Terraform needs to be installed. Run the following commands:
 1. Update apt and install the gnupg software
