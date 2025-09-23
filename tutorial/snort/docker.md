@@ -2,7 +2,7 @@
 In this tutorial Docker is used to containzerize each tool. 
 
 **Run the following commands:**
-1. Set up Docker's apt repository: 
+Set up Docker's apt repository: 
 ```
      sudo apt-get update
      sudo apt-get install ca-certificates curl
@@ -11,7 +11,7 @@ In this tutorial Docker is used to containzerize each tool.
      sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```
 
-2. Add the repository to Apt sources:
+Add the repository to Apt sources:
 ```
      echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
@@ -20,7 +20,7 @@ In this tutorial Docker is used to containzerize each tool.
 sudo apt-get update
 ```
 
-3. Install the latest version: 
+Install the latest version: 
   
 ```
    sudo apt-get install docker-ce docker-ce-cli containerd.io 
@@ -30,11 +30,11 @@ sudo apt-get update
   hit 'Y' and enter to begin installation
   hit 'N' and enter to accept default configuration
 
-4. Check docker service:
+Check docker service:
 ```
   docker --version
 ```
-5. If you see:
+If you see:
 ```
   Docker version 28.4.0, build d8eb465
 ```
