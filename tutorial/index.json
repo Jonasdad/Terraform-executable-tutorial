@@ -12,22 +12,18 @@
         },
         {
           "title": "Install Docker",
-          "text": "docker/installing_docker.md"
-        }
-        {
-          "title": "Docker",
-          "text": "snort/docker.md"
+          "text": "docker/docker.md"
         },
         {
-          "title": "Make your own Snort Docker container (Optional)",
+          "title": "Create your own Snort Docker container (Optional)",
           "text": "snort/snort.md"
         },
         {
-          "title": "Make your own HTTP Server Docker container (Optional)",
+          "title": "Create your own HTTP Server Docker container (Optional)",
           "text": "http/http.md"
         },
         {
-          "title": "Terraform",
+          "title": "Install Terraform",
           "text": "terraform/installing_terraform.md"          
         },
         {
