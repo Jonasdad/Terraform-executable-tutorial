@@ -34,8 +34,8 @@ sudo apt-get update
 ```
   docker --version
 ```
-5. If you should see:
+5. If you see:
 ```
   Docker version 28.4.0, build d8eb465
 ```
-every thing went correctly.
+the installation is OK!
