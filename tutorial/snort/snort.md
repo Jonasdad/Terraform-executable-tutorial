@@ -90,5 +90,4 @@ docker images
 
 ## What We Have Done
 - We successfully created a Snort instance that logs custom alerts.
-- We created a simple HTTP server that serves the log directory to clients.
 - We built the image and prepared it for use by Terraform in later steps of this tutorial.
