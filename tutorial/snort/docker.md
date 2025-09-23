@@ -39,3 +39,5 @@ Start the Docker service with:
 ```bash
 systemctl start docker
 ```
+
+**In case there is an error starting the service, wait a minute and then try again.**
