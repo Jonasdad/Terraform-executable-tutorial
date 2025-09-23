@@ -1,4 +1,4 @@
-# IaC Network Monitoring: Snort + Terraform
+# IaC Network Monitoring: Snort + HTTP Server + Terraform
 This tutorial aims to provide the user with basic knowledge of how to install and configure Terraform, Docker and Snort to work in sync for quick and easy deployment of network monitoring. Terraform will be used to deploy and manage two separate Docker containers, one running Snort and one running a simple HTTP server for alert monitoring.
 
 On a high level, the tutorial will include:

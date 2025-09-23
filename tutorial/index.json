@@ -1,5 +1,5 @@
 {
-  "title": "IaC Network Monitoring: Snort + Splunk + Terraform",
+  "title": "IaC Network Monitoring: Snort + HTTP Server + Terraform",
   "description": "Installation, configuration and execution of Network Monitoring tools as Infrastructure as Code",
   "details": {
     "intro": {
