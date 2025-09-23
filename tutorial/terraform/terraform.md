@@ -4,13 +4,15 @@ Finally, Terraform needs to be installed. Run the following commands:
 1. Update apt and install the gnupg software
   - sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 2. Install the GPG key
-  - <pre>wget -O- https://apt.releases.hashicorp.com/gpg | \ gpg --dearmor | \ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+   - <pre>wget -O- https://apt.releases.hashicorp.com/gpg | \ </pre> 
+   - <pre>gpg --dearmor | \</pre> 
+   - <pre>sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 </pre>
 
 3. Verify the GPG key:
-  - <pre>gpg --no-default-keyring \
---keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
---fingerprint</pre>
+  - <pre>gpg --no-default-keyring \</pre>
+  - <pre>--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \</pre>
+  - <pre>--fingerprint</pre>
 
 4. Add the Hashicorp repository to the system:
   - <pre>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list</pre>
