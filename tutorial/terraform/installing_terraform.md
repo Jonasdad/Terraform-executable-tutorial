@@ -37,4 +37,8 @@ Verify the installation by running:
 ```
 terraform -help
 ```
-You should see all Terraform commands that are available with the current installation.
+You should see all Terraform commands that are available with the current installation
+
+## What We Have Done
+- We have verified the authenticity of the packages to ensure legitimacy
+- We have installed Terraform on our system
