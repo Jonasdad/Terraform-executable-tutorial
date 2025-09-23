@@ -6,24 +6,29 @@
       "text": "intro.md"
     },
     "steps": [
-        {"title": "Docker",
+        {
+          "title": "Docker",
           "text": "snort/docker.md"
         },
         {
-          "title": "Snort",
+          "title": "Make your own Snort Docker container (Optional)",
           "text": "snort/snort.md"
         },
         {
-          "title": "Splunk",
-          "text": "splunk/splunk.md"
+          "title": "Make your own HTTP Server Docker container (Optional)",
+          "text": "http/http.md"
         },
         {
           "title": "Terraform",
           "text": "terraform/terraform.md"          
         },
         {
-          "title": "Setting up Snort through Docker",
+          "title": "Setting up Terraform to work with Docker",
           "text": "setup/setup_terraform.md"
+        },
+        {
+          "title": "Deploy and manage your containers through Terraform",
+          "text": "deploy/deploy.md"
         }
     ]
   },

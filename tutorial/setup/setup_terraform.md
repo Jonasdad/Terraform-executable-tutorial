@@ -41,7 +41,8 @@ terraform{
 }
 ```
 
-Secondly
+Secondly, our docker containers (for the purposes of this tutorial) needs to communicate with each other over a Docker network. 
+In order to achieve this, 
 
 ```
 terraform{
