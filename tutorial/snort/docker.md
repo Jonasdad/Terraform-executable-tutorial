@@ -1,5 +1,5 @@
 **Docker**
-In this tutorial Docker is used to containzerize each tool. 
+In this tutorial Docker is used to containerize each tool. 
 
 **Run the following commands:**
 Set up Docker's apt repository: 
