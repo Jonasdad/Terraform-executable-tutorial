@@ -8,26 +8,27 @@ This tutorial will guide you through the setup of Snort, with a simple rule for 
  - Docker installed on your machine
 
 ## Create Custom Snort Rules and Run Script
-- Create a directory called snort and navigate into it:
+Create a directory called snort and navigate into it:
 ```bash
 cd
 mkdir snort
 cd snort
 ```
-- Create any custom rules you want to use in a file called `devops.rules`. For this tutorial we will use a simple rule that detects ICMP traffic and logs it to the alert file. Create the file and open it with nano:
+Create any custom rules you want to use in a file called `devops.rules`. For this tutorial we will use a simple rule that detects ICMP traffic and logs it to the alert file. Create the file and open it with nano:
 ```bash
 nano devops.rules
 ```
-- Add the following rule to the file. The rules should be written one per line:
+Add the following rule to the file. The rules should be written one per line:
 ```bash
 alert icmp any any -> any any (msg:"ICMP echo request detected!"; itype:8; sid:10000001;)
 ```
-- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
-- Now we will create the script that runs on container start. This script will start Snort with the appropriate command line arguments to read the custom rules and log alerts to our monitoring directory. It will also start the HTTP server to serve the log files. Create `run-snort.sh` and open it with nano:
+Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
+
+Now we will create the script that runs on container start. This script will start Snort with the appropriate command line arguments to read the custom rules and log alerts to our monitoring directory. It will also start the HTTP server to serve the log files. Create `run-snort.sh` and open it with nano:
 ```bash
 nano run-snort.sh
 ```
-- Add the following lines to the file:
+Add the following lines to the file:
 ```bash
 #!/bin/bash
 
@@ -49,14 +50,14 @@ snort -c /etc/snort/snort.conf \
 	-q \
 	-K ascii
 ```
-- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
+Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 
 ## Create Dockerfile
-- Create a file called `Dockerfile` and open it with nano
+Create a file called `Dockerfile` and open it with nano
 ```bash
 nano Dockerfile
 ```
-- We will now create a small containerized environment with the required packages to run the Snort instance. Add the following lines to the Dockerfile:
+We will now create a small containerized environment with the required packages to run the Snort instance. Add the following lines to the Dockerfile:
 ```Dockerfile
 FROM ubuntu:latest
 
@@ -75,18 +76,18 @@ EXPOSE 8080
 
 ENTRYPOINT ["/etc/snort/run-snort.sh"]
 ```
-- Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
+Close the editor by pressing `ctrl + X`, `y` and `enter` to save and exit.
 
 ## Build the Image
-- Inside the `snort` directory, build the Docker image with the following command. This will download the required base image, dependencies, and create a new image called `snort`:
+Inside the `snort` directory, build the Docker image with the following command. This will download the required base image, dependencies, and create a new image called `snort`:
 ```bash
 docker build -t snort .
 ```
-- After the build completes, you can verify that the image was created successfully by running:
+After the build completes, you can verify that the image was created successfully by running:
 ```bash
 docker images
 ```
-- You should see an image named `snort` in the list.
+You should see an image named `snort` in the list.
 
 ## What We Have Done
 - We successfully created a Snort instance that logs custom alerts.
