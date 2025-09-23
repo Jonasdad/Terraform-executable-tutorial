@@ -10,6 +10,7 @@ This tutorial will guide you through the setup of Snort, with a simple rule for 
 ## Create Custom Snort Rules and Run Script
 - Create a directory called snort and navigate into it:
 ```bash
+cd
 mkdir snort
 cd snort
 ```

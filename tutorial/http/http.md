@@ -10,6 +10,7 @@ This tutorial will guide you through creating an HTTP server that polls the Snor
 ## Create Dockerfile and run.sh Script
 - Create a directory called http and navigate into it:
 ```bash
+cd
 mkdir http
 cd http
 ```
