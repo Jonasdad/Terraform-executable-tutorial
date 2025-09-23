@@ -7,6 +7,14 @@
     },
     "steps": [
         {
+          "title": "Background",
+          "text": "background.md"
+        },
+        {
+          "title": "Install Docker",
+          "text": "docker/installing_docker.md"
+        }
+        {
           "title": "Docker",
           "text": "snort/docker.md"
         },
