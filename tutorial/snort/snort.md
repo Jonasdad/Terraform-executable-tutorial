@@ -1,4 +1,4 @@
-# Make your own Snort Docker container (Optional)
+# Create Your Own Snort Docker Container (Optional)
 
 *This section is optional. We provide this Docker image for you to use directly with Terraform. Skip ahead to the Terraform tutorials if you prefer to use the pre-built images.*
 
