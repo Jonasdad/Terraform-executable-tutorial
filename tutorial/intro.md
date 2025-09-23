@@ -23,6 +23,7 @@ By the end of this tutorial, you should be able to:
 5. Install Terraform
 6. Setting up Terraform to work with Docker
 7. Deploy and manage your containers through Terraform
+8. Conclusion
 
 
 Please press start to proceed to the next section.
