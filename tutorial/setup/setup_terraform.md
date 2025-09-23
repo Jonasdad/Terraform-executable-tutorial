@@ -2,24 +2,20 @@
 
 Now that all the required tools are installed.
 
-1. Navigate to the home directory
-```
-cd filesystem/home/Ubuntu
-```
-2. Create a directory called terraform
+1. Create a directory called terraform
 
 ```
-mkdir Terraform
+mkdir terraform
 ```
-3. Move into the newly created directory
+2. Move into the newly created directory
 ```
-cd Terraform
+cd terraform
 ```
-4. Make a 'main.tf' file
+3. Make a 'main.tf' file
 ```
 touch main.tf
 ```
-5. Open 'main.tf' in a text editor
+4. Open 'main.tf' in a text editor
 ```
 nano main.tf
 ```
@@ -55,6 +51,8 @@ resource "docker_image" "snort"{
 	name = "pilsnerfrajz/snort-server:latest"
 }
 ```
+Note: pilsnerfrajz is a co-author to this tutorial has prepared both docker images on Docker Hub as they are not deemed as an important learning outcome of this tutorial.
+
 
 Now, the images instances (containers) operating mode must be specified through the __docker_container__ resource. This resource type allows many configuration types as cpu usage, gpu_usage, timeout requirements, network configurations and many more. For the purposes of this tutorial the parameters, name, entrypoint, image id, must_run and network-dependencies are sufficient. Please see copy and paste the configuration below into your main.tf file.
 ```
@@ -91,7 +89,7 @@ resource "docker_network" "container_network" {
 }
 ```
 
-This simply tells Terraform that there exists a docker network called container_network. To use this network we must specify that the containers will use this network and that they are dependent on it. Meaning, that if the network doesn't exist, the containers will not launch.
+This simply tells Terraform that there exists a docker network called container_network. To use this network we must specify that the containers will use this network and that they are dependent on it. However, if the network doesn't exist, Terraform will create a docker network for us! This step is really just to explain what is happening and why.
 
 Inside your main.tf folder, locate the two __docker_container__ resources __http__ and __snort__. Inside the each resource, specify an advanced network parameter, nested with the network name. Outside the __networks_advanced__ parameter, but inside the __docker_container__ resource, specify that the container is dependent on this network. See below for the correct configuration:
 

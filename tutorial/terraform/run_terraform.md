@@ -15,7 +15,11 @@ Here Terraforms checks that the installation is OK and that the commands are wor
 
 ## Applying the Changes
 
-In terraform, applying the changes means that the specified resources will be used. In our case, since we specified docker containers, this means that these containers will be launched and configured in the way we specified in the configuration file `main.tf`.
+In terraform, applying the changes means that the specified resources will be used. In our case, since we specified docker containers, this means that these containers will be launched and configured in the way we specified in the configuration file `main.tf`. Run the command:
+
+```
+sudo terraform apply
+```
 
 The program should tell you everything looks ok and what it plans to do when you apply the changes. If not, please go back and double check that the `main.tf` file is correctly configured. 
 
@@ -39,6 +43,8 @@ Of course, we want to use the software inside the containers. As Snort is an Int
 sudo docker exec snort ping 8.8.8.8
 ```
 
+Let the ping run for a few seconds and then kill the command by hitting `ctrl + c`
+
 Hopefully, this triggered the rule but we wont see any output yet. To see the output, snort pushes its alerts to the http server! Let's see if we have any alerts saved on the http-server by grabbing the logs of the `http` docker container.
 
 
@@ -55,6 +61,8 @@ Now that we're at the end of this tutorial, we need to clean up our environment 
 ```
 terraform destroy
 ```
+and when prompted, type `yes`
+
 
 Terraform will now undeploy the infrastructure and clean up the system. Of course, one can simply redeploy the entire infrastructure again by running `terraform apply`. 
 
