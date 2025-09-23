@@ -1,5 +1,7 @@
 # Make your own Snort Docker container (Optional)
 
+*This section is optional. We provide this Docker image for you to use directly with Terraform. Skip ahead to the Terraform tutorials if you prefer to use the pre-built images.*
+
 This tutorial will guide you through the setup of Snort, with a simple rule for detecting ICMP traffic and writing alerts to a log direcory. We will create a basic HTTP server that serves that files inside the log directory to clients. These logs can then be used by administrators or analysts for log analysis to detect potential security incidents.
 
 ## Prerequisites

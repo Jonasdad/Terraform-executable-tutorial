@@ -1,5 +1,7 @@
 # Create Your Own HTTP Server (Optional)
 
+*This section is optional. We provide this Docker image for you to use directly with Terraform. Skip ahead to the Terraform tutorials if you prefer to use the pre-built images.*
+
 This tutorial will guide you through creating an HTTP server that polls the Snort container for alerts. The alert logs will be downloaded and printed to the terminal inside the container. This will simulate a SIEM software that aggregate potential network incidents allowing for network monitoring.
 
 ## Prerequisites
@@ -11,7 +13,7 @@ This tutorial will guide you through creating an HTTP server that polls the Snor
 mkdir http
 cd http
 ```
-- Create a file called Dockerfile and open it with nano
+- Create a file called `Dockerfile` and open it with nano
 ```bash
 nano Dockerfile
 ```
