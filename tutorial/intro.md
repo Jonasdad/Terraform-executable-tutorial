@@ -7,6 +7,9 @@ On a high level, the tutorial will include:
 - The Terraform configuration files to deploy and manage the containers
 - Generating traffic to trigger Snort alerts and viewing them through the HTTP server
 
+## Why This Matters for DevOps
+This tutorial demonstrates core DevOps principles with Infrastructure as Code. I highlights automated deployment and teardown of environments, allowing for rapid iteration and testing. If anything goes wrong, you can simply edit the configuration files and redeploy. This approach minimizes human error and ensures consistency across different environments. It also showcases a real world use case for Terraform, which is a widely used tool in the industry.
+
 ## Intended Learning Outcomes
 By the end of this tutorial, you should be able to:
 - Understand the basics of Infrastructure as Code (IaC) and its benefits.
