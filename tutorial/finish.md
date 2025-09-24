@@ -3,7 +3,7 @@ Congratulations! You have successfully deployed and managed a multi-container Do
 
 The current infrastructure configured by Terraform is visualized below:
 
-<img src="https://github.com/Jonasdad/Terraform-executable-tutorial/blob/main/tutorial/Terraform-Flowchart.png">
+<img src="https://raw.githubusercontent.com/Jonasdad/Terraform-executable-tutorial/main/tutorial/Terraform-Flowchart.png">
 
 ## Intended Learning Outcomes
 - *Understand the basics of Infrastructure as Code (IaC) and its benefits*
