@@ -73,6 +73,7 @@ resource "docker_container" "snort" {
 The above configuration will run the images with the scripts specified in the `entrypoint` parameter. See the previous tutorials for more information about these scripts. 
 
 Define the new Docker network resource like below in the `main.tf` file. When running this configuration file a docker command to create a network is executed and will be used by this terraform configuration for container communication.
+
 ```
 resource "docker_network" "container_network" {
 	name = "container_network"
