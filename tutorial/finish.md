@@ -1,6 +1,10 @@
 # Conclusion
 Congratulations! You have successfully deployed and managed a multi-container Docker application using Terraform. Let's revise the Intended Learning Outcomes to see if we have met our goals.
 
+The current infrastructure configured by Terraform is visualized below
+
+![Flowchart](/Terraform-Flowchart.png)
+
 ## Intended Learning Outcomes
 - *Understand the basics of Infrastructure as Code (IaC) and its benefits*
 	- You have learned what Infrastructure as Code (IaC) is and how it can help you manage and provision your infrastructure through code instead of manual processes. This was achived by using Terraform to define and manage Docker containers for quick and easy teardown and redeployment of the entire environment.

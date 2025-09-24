@@ -72,25 +72,12 @@ resource "docker_container" "snort" {
 
 The above configuration will run the images with the scripts specified in the `entrypoint` parameter. See the previous tutorials for more information about these scripts. 
 
-Finally, in order for these containers to communicate over a docker network, we must create one. Open a new terminal tab by pressing `+` button at the top of the terminal and run the command:
-```
-cd terraform
-docker network create container_network
-```
-
-The output of the command is the network ID for the newly created Docker network. Copy the network ID and run the following Terraform command in the same terminal window:
-```
-terraform import docker_network.container_network <paste ID here>
-```
-
-Now we must specifiy that this is a resource we want to use for our containers. Go back to the previous terminal tab and define the new Docker network resource like below in the `main.tf` file. 
+Define the new Docker network resource like below in the `main.tf` file. When running this configuration file a docker command to create a network is executed and will be used by this terraform configuration for container communication.
 ```
 resource "docker_network" "container_network" {
 	name = "container_network"
 }
 ```
-
-This simply tells Terraform that there exists a Docker network called `container_network`. To use this network we must specify that the containers will use this network and that they are dependent on it. However, if the network doesn't exist, Terraform will create a Docker network for us! This step is really just to explain what is happening and why.
 
 Inside your `main.tf` file, locate the two `docker_container` resources `http` and `snort`. Inside of each resource, specify an advanced network parameter, nested with the network name. Outside the `networks_advanced` parameter, but inside the `docker_container` resource, specify that the container is dependent on this network. See below for the correct configuration:
 
