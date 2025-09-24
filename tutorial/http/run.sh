@@ -1,8 +1,24 @@
 #!/bin/bash
 
 get_logs() {
-    echo "Starting log polling service..."
+    echo "Snorting logs..."
+    cat << 'EOF'
+    _._ _..._ .-',     _.._(`))
+   '-. `     '  /-._.-'    ',/
+      )         \            '.
+     / _    _    |             \
+    |  o    o    /              |
+    \   .-.                     ;
+     '-('' ).-'       ,'       ;
+        '-;           |      .'
+           \           \    /
+           | 7  .__  _.-\   \
+           | |  |  ``/  /`  /
+          /,_|  |   /,_/   /
+             /,_/      '`-'
+EOF
     while true; do
+        echo ""
         echo "Polling for logs..."
         sleep 30
         # Get logs from Snort container HTTP server (serving /var/log/snort directory)
@@ -39,6 +55,14 @@ get_logs() {
             fi
         done
     done
+    cat << 'EOF'
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 
+    ░░░░█▀▀▀░█▀▀▀░░█▀▀░▀▀█░░█░░░░
+    ░░░░█░▀█░█░▀█░░█▀▀░▄▀░░░▀░░░░
+    ░░░░▀▀▀▀░▀▀▀▀░░▀▀▀░▀▀▀░░▀░░░░
+    ░░░░░░░░░░░░░░░░░░░░░( ͡° ͜ʖ ͡°)_╭∩╮
+EOF
+    echo "The TAs successfully used the pig to Snort logs!"
 }
 
 # Start the log polling service
